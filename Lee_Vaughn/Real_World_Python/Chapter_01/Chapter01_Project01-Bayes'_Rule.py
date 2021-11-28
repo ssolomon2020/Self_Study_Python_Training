@@ -98,17 +98,17 @@ class Search(): # Define a class named search.
         self.sep2 = 0 # Probability of search effectiveness for search area 2 set to initial state 0.
         self.sep3 = 0 # Probability of search effectiveness for search area 3 set to initial state 0.
 
-    # 
-    def draw_map(self, last_known): # Define draw_map() states within the template.
+    # Defining a new function to draw map legend, labels, and search area bounding boxes. 
+    def draw_map(self, last_known): # Define draw_map() states within the class.
         """Display basemap with scale, last known xy location, search areas."""
         cv.line(self.img, (20, 370), (70, 370), (0, 0, 0), 2) # Draw line segment on image using coordinates for map legend.
         cv.putText(self.img, '0', (8, 370), cv.FONT_HERSHEY_PLAIN, 1, (0, 0, 0)) # Draw text string using font at coordinates for map legend.
         cv.putText(self.img, '50 Nautical Miles', (71, 370), cv.FONT_HERSHEY_PLAIN, 1, (0, 0, 0)) # Draw text string using font at coordinates for map legend.
-        cv.rectangle(self.img, (SA1_CORNERS[0], SA1_CORNERS[1]), (SA1_CORNERS[2], SA1_CORNERS[3]), (0, 0, 0), 1) # Draw rectangle 1 using font at coordinates
+        cv.rectangle(self.img, (SA1_CORNERS[0], SA1_CORNERS[1]), (SA1_CORNERS[2], SA1_CORNERS[3]), (0, 0, 0), 1) # Draw rectangle 1 using coordinates.
         cv.putText(self.img, '1', (SA1_CORNERS[0] + 3, SA1_CORNERS[1] + 15), cv.FONT_HERSHEY_PLAIN, 1, 0) # Draw label text string using font at coordinates relating to rectangle 1.
-        cv.rectangle(self.img, (SA2_CORNERS[0], SA2_CORNERS[1]), (SA2_CORNERS[2], SA2_CORNERS[3]), (0, 0, 0), 1) # Draw rectangle 2 using font at coordinates
+        cv.rectangle(self.img, (SA2_CORNERS[0], SA2_CORNERS[1]), (SA2_CORNERS[2], SA2_CORNERS[3]), (0, 0, 0), 1) # Draw rectangle 2 using coordinates.
         cv.putText(self.img, '2', (SA2_CORNERS[0] + 3, SA2_CORNERS[1] + 15), cv.FONT_HERSHEY_PLAIN, 1, 0) # Draw label text string using font at coordinates relating to rectangle 2.
-        cv.rectangle(self.img, (SA3_CORNERS[0], SA3_CORNERS[1]), (SA3_CORNERS[2], SA3_CORNERS[3]), (0, 0, 0), 1) # Draw rectangle 3 using font at coordinates
+        cv.rectangle(self.img, (SA3_CORNERS[0], SA3_CORNERS[1]), (SA3_CORNERS[2], SA3_CORNERS[3]), (0, 0, 0), 1) # Draw rectangle 3 using coordinates.
         cv.putText(self.img, '3', (SA3_CORNERS[0] + 3, SA3_CORNERS[1] + 15), cv.FONT_HERSHEY_PLAIN, 1, 0) # Draw label text string using font at coordinates relating to rectangle 3.
         cv.putText(self.img, '+', (last_known), cv.FONT_HERSHEY_PLAIN, 1, (0, 0, 255)) # Draw indicator text string using font at coordinates for last known position variable.
         cv.putText(self.img, '+ = Last Known Position', (274, 355), cv.FONT_HERSHEY_PLAIN, 1, (0, 0, 255)) # Draw label text string using font at coordinates for the map legend.
@@ -117,7 +117,8 @@ class Search(): # Define a class named search.
         cv.moveWindow('Search Area', 750, 10) # Draw label text string using font at coordinates for the map legend.
         cv.waitKey(500) # Wait 500
 
-    def sailor_final_location(self, num_search_areas):
+    # Defining a new function for missing sailor's final location.
+    def sailor_final_location(self, num_search_areas): # Define sailor_final_location() states within the class.
         """Return the actual x,y location of the missing sailor."""
         # Find sailor coordinates with respect to any Search Area subarray.
         # self.sailor_actual[0] = np.random.choice(self.sa1.shape[1], 1) # Original line commented out due to publishing error.
@@ -128,46 +129,52 @@ class Search(): # Define a class named search.
 
         area = int(random.triangular(1, num_search_areas + 1)) # Set area as an integer of a triangular distribution from samples over the interval of lower and upper limits.
         
-        if area == 1: # Check if area is equal to 1.
+        # If and elseif statements to return x and y coordinates of sailor when called.
+        if area == 1: # Check if area is equal to 1 is true.
             x = self.sailor_actual[0] + SA1_CORNERS[0]
             y = self.sailor_actual[1] + SA1_CORNERS[1]
-            self.area_actual = 1 # Set object's area_actual variable to 1. 
-        elif area == 2:
+            self.area_actual = 1 # Set object's area_actual variable to 1 if area equals 1 is true. 
+        elif area == 2: # Otherwise check if area is equal to 2 is true if not equal to 1.
             x = self.sailor_actual[0] + SA2_CORNERS[0]
             y = self.sailor_actual[1] + SA2_CORNERS[1]
-            self.area_actual = 2
-        elif area == 3:
+            self.area_actual = 2 # Set object's area_actual variable to 2 if area equals 2 is true.
+        elif area == 3: # Otherwise check if area is equal to 3 if not equal to either 1 or 2.
             x = self.sailor_actual[0] + SA3_CORNERS[0]
             y = self.sailor_actual[1] + SA3_CORNERS[1]
-            self.area_actual = 3
-        return x, y
+            self.area_actual = 3 # Set object's area_actual variable to 3 if area equals 3 is true.
+        return x, y # Return function values to the caller.
     
+    # Defining a new function to calculate and update search effectivness for each area.
     def calc_search_effectiveness(self):
         """Set decimal search effectiveness value per search area."""
-        self.sep1 = random.uniform(0.2, 0.9)
-        self.sep2 = random.uniform(0.2, 0.9)
-        self.sep3 = random.uniform(0.2, 0.9)
+        self.sep1 = random.uniform(0.2, 0.9) # Get a random number in range of tuple a and tuple b dependant on rounding for variable sep1.
+        self.sep2 = random.uniform(0.2, 0.9) # Get a random number in range of tuple a and tuple b dependant on rounding for variable sep2.
+        self.sep3 = random.uniform(0.2, 0.9) # Get a random number in range of tuple a and tuple b dependant on rounding for variable sep3.
 
-    def conduct_search(self, area_num, area_array, effectiveness_prob):
+    # Defining a new function to return search results and list of searched coordinates.
+    def conduct_search(self, area_num, area_array, effectiveness_prob): # Define conduct_search states area_num, area_array, and effective_prob within the class.
         """Return search results and list of searched coordinates."""
-        local_y_range = range(area_array.shape[0])
-        local_x_range = range(area_array.shape[1])
-        coords = list(itertools.product(local_x_range, local_y_range))
+        local_y_range = range(area_array.shape[0]) # Variable for local range of y created and set to the shape 0 of the area array.
+        local_x_range = range(area_array.shape[1]) # Variable for local range of x created and set to the shape 1 of the area array.
+        coords = list(itertools.product(local_x_range, local_y_range)) # Variable coords is equal to the list of products of the tuple variables local_x_range and local_y_range using itertools.
         random.shuffle(coords)
-        coords = coords[:int((len(coords) * effectiveness_prob))]
-        loc_actual = (self.sailor_actual[0], self.sailor_actual[1])
-        if area_num == self.area_actual and loc_actual in coords:
-            return 'Found in Area {}.'.format(area_num), coords
-        else:
-            return 'Not Found', coords
+        coords = coords[:int((len(coords) * effectiveness_prob))] # Variable coords is now equal to the list of itself with integers of itself times length of items times effectiveness_prob.
+        loc_actual = (self.sailor_actual[0], self.sailor_actual[1]) # Variable loc_actual is the equal to a tuple of sailor_actual[0] and sailor_actual[1] states.
+        
+        #If else statement to return strings and coordinates relating to finding or not finding the missing sailor.
+        if area_num == self.area_actual and loc_actual in coords: # Check if variable area_num is equal to the values of area_actual and loc_actual within variable coords is true.
+            return 'Found in Area {}.'.format(area_num), coords # Return the formatted string value for found sailor and coordinates to caller.
+        else: # Otherwise if false.
+            return 'Not Found', coords # Return the string and the coordinates for not finding the sailor. 
 
-    def revise_target_probs(self):
+    # Defining a new function to calculate and revise the probabilities the missing sailor is in a search area.
+    def revise_target_probs(self): # Define revise_target_probs() and refer to itself. Here's our Bayesean Maths.
         """Update area target probabilities based on search effectiveness."""
-        denom = self.p1 * (1 - self.sep1) + self.p2 * (1 - self.sep2) \
-                + self.p3 * (1 - self.sep3)
-        self.p1 = self.p1 * (1 - self.sep1) / denom
-        self.p2 = self.p2 * (1 - self.sep2) / denom
-        self.p3 = self.p3 * (1 - self.sep3) / denom
+        denom = self.p1 * (1 - self.sep1) + self.p2 * (1 - self.sep2) \ 
+                + self.p3 * (1 - self.sep3) # Create variable denom and have it equal to the sum of the sep1 value minus 1 times p1 plus the sum of sep2 minus 1 times p2 plus the sum of sep3 minus 1 times p3.
+        self.p1 = self.p1 * (1 - self.sep1) / denom # The variable within class, p1 is equal to sep1 minus 1 multiplied by itself divided by the value of denom.
+        self.p2 = self.p2 * (1 - self.sep2) / denom # The variable within class, p2 is equal to sep2 minus 1 multiplied by itself divided by the value of denom.
+        self.p3 = self.p3 * (1 - self.sep3) / denom # The variable within class, p3 is equal to sep3 minus 1 multiplied by itself divided by the value of denom.
 
 # End of Search class
 # New menu function being defined for draw_menu(search_num) to choose search areas
