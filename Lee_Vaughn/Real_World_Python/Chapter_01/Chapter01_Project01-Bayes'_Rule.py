@@ -177,12 +177,12 @@ class Search(): # Define a class named search.
         self.p3 = self.p3 * (1 - self.sep3) / denom # The variable within class, p3 is equal to sep3 minus 1 multiplied by itself divided by the value of denom.
 
 # End of Search class
-# New menu function being defined for draw_menu(search_num) to choose search areas
 
-def draw_menu(search_num):
+# New menu function being defined for draw_menu(search_num) to choose search areas
+def draw_menu(search_num): # Define draw_menu with reference to the value of search_num.
     """Print menu of choices for conducting area searches."""
-    print('\nSearch {}'.format(search_num))
-    print(
+    print('\nSearch {}'.format(search_num)) # Print a space and string with dictionary and format with the value of search_num.
+    print( # Print Menu choices
         """
         Choose next areas to search:
         0 - Quit
@@ -194,7 +194,7 @@ def draw_menu(search_num):
         6 - Search Areas 2 & 3
         7 - Start Over
         """
-        )
+        ) # Finish printing menu choices
 
 # Main function being defined.
 
