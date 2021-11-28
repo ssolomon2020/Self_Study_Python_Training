@@ -170,7 +170,7 @@ class Search(): # Define a class named search.
     # Defining a new function to calculate and revise the probabilities the missing sailor is in a search area.
     def revise_target_probs(self): # Define revise_target_probs() and refer to itself. Here's our Bayesean Maths.
         """Update area target probabilities based on search effectiveness."""
-        denom = self.p1 * (1 - self.sep1) + self.p2 * (1 - self.sep2) \ 
+        denom = self.p1 * (1 - self.sep1) + self.p2 * (1 - self.sep2) \
                 + self.p3 * (1 - self.sep3) # Create variable denom and have it equal to the sum of the sep1 value minus 1 times p1 plus the sum of sep2 minus 1 times p2 plus the sum of sep3 minus 1 times p3.
         self.p1 = self.p1 * (1 - self.sep1) / denom # The variable within class, p1 is equal to sep1 minus 1 multiplied by itself divided by the value of denom.
         self.p2 = self.p2 * (1 - self.sep2) / denom # The variable within class, p2 is equal to sep2 minus 1 multiplied by itself divided by the value of denom.
