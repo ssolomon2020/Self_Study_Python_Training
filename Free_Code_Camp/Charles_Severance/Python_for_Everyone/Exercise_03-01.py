@@ -28,13 +28,15 @@ if float(p_hours) > 40 :
     # Create the variable 'op_gross' and set it as the product of the variables stored in 'op_hours' and ('op_rate'*1.5) within the float functions to convert the string variables to floating point numerics.
     op_gross = float(op_hours) * (float(p_rate) * 1.5)
     # Call the print function to print the string 'Gross pay with over-time: ' with the sum of the values contained in the variables 'op_gross' and 'p_hours' in the CLI buffer.
-    print("Gross pay with over-time: ", op_gross + p_gross)
+    print("Gross pay with over-time: $", op_gross + p_gross)
+
+    print('Regular: $',p_gross , ' Over-time: $', op_gross)
 
 # If p_hours > 40 is false, then run the else statement for regular pay calculation.
 else :
     # Create the variable 'p_gross' and set it as the product of the variables stored in 'p_hours' and 'p_rate' within the float functions to convert the string variables to floating point numerics.
     p_gross = float(p_hours) * float(p_rate)
-    # Call the print function to print the string 'Gross pay: ' with the product contained in the variable 'op_gross' in the CLI buffer.
-    print("Gross pay: ", p_gross)
+    # Call the print function to print the string 'Gross pay: ' with the product contained in the variable 'p_gross' in the CLI buffer.
+    print("Gross pay:", p_gross)
 
 # The program will end and return to the normal CLI cursor.
