@@ -51,7 +51,7 @@ for line in han:
         # For loop will continue until interrupted or finite strings are parsed.
     # If the order of the evaluation is switched, the traceback error will fail again due to list index being out of range.
 
-    # Print position defined strings captured in variable 'wds' dictionary. Should print 'Wikipedia'.
+    # Print position defined strings captured in variable 'wds' list. Should print 'Wikipedia'.
     print(wds[2]) # For some reason it is throwing tracebacks on positions after 3. Should look into this later.
 
 # End of 'for' loop statement block.
