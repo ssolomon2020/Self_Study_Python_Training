@@ -14,7 +14,7 @@
 # Create variable 'str' and set its value to the string 'X-DSPAM-Confidence: 0.8475' for this find function demonstration.
 str = 'X-DSPAM-Confidence: 0.8475  '
 
-# Create variable 'ipos' and set its value to the position of ':' with the 'find()' function applied to the 'str' variable. 
+# Create variable 'ipos' and set its value to the position of ':' with the 'find()' method applied to the 'str' string variable. 
 ipos = str.find(':')
 
 # Test 'ipos' variable. Remove comment mark below to test.
