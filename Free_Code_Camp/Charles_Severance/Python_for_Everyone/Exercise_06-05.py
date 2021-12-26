@@ -26,7 +26,7 @@ piece = str[ipos+2:]
 # Test 'piece' variable. Remove comment mark below to test.
 # print(piece) 
 
-# Test will fail due to concatenation of string and float mismatch Remove comment ark below to Test.
+# Test will fail due to concatenation of string and float mismatch. Remove comment mark below to Test.
 # print(piece+42.0) 
 
 # Create and set the variable 'value' with the floating point of the 'piece' variable.
