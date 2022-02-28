@@ -21,7 +21,7 @@ for file in os.listdir(image_folder):
   # The try will attempt to open file and process the file as a new file and path.
   try:
     with Image.open(filepath) as im:
-      # For whatever reason the save() method operates without having to be applied to the 
+      # For whatever reason the save() method operates without having to be reassigned to the 
       # variable while the other Image related methods need to be applied to the variable.
       im = im.convert("RGB").rotate(270).resize(size)
       im.save(destpath, "JPEG", optimize=True, quality=90)
