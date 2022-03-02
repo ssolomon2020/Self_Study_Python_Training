@@ -1,4 +1,4 @@
-Course notes by Shawn Solomon
+**Course notes by Shawn Solomon**
 
 # Business Automation with Python: Getting Started #
 - Course on PluralSight | Web Site: http://www.pluralsight.com
