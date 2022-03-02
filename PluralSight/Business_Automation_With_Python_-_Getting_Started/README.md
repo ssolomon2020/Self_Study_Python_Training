@@ -1,9 +1,9 @@
-# Business Automation with Python: Getting Started
+# Business Automation with Python: Getting Started #
 - Course on PluralSight | Web Site: http://www.pluralsight.com
 - By: Eduardo Freitas | Web Site: https://edfreitas.me
 - Course Notes
 
-# I. Course Overview
+## I. Course Overview ##
 
 Eduardo is a Software Developer, Data Capture, and Business Automation specialist.
 
@@ -16,14 +16,14 @@ Some of the major topics covered include: core aspects of Business Automation, f
 By the end of this course you'll know the basics of Business Automation using Python, and be able to write code that uses it. Before beginning the the course, you should have some basic knowledge in Python and find your way around Visual Studio Code
 
 
-# II. File Automation Tasks
+## II. File Automation Tasks ##
 
-# 01. Introduction
+### 01. Introduction ####
 
 Python is an amazing programming language packed with great features and libraries. It is also great for automating repetative tasks. Python is also super easy to learn, so even if you've never used it before, but have some previous programming experience, You'll be able to follow along and apply some of the techniques in this course through your daily work. Automation is all about having the computer to do the work for you rather than the you working for the computer.
 
 
-# 02. Overview
+### 02. Overview ###
 
 What is covered:
 * What is business Automation?
@@ -35,7 +35,7 @@ What is covered:
 * Handling Zip Archives with Python
 
 
-# 03. What is Business Automation?
+### 03. What is Business Automation? ###
 
 Business Automation is - a technology-enabled automation of business processes.
 - Note: Be aware that business processes may vary.
@@ -55,7 +55,7 @@ Why use Python?
 
 With that in mind, it is a great choice for writing scripts that accomplish the same repetitive tasks a person would do manually on a computer. A well designed Python script can reduce manual work tremendously.
 
-# 04. What is File Handling Automation?
+### 04. What is File Handling Automation? ###
 
 File Handling Automation is - the capability of handling computer files in an automatic way.
   Files and their content can be manipulated and changed without any manual intervention.
@@ -69,7 +69,7 @@ What types of file automation tasks can we carry out with Python?
 * Get and retrieve files from an FTP server.
 * Archive files. (Zip)
 
-# 05. File Handling Basics
+### 05. File Handling Basics ###
 
 A file is made up of a file path and a file name.
 - C:\Folder\File.txt
@@ -127,56 +127,56 @@ You can also call the split method with the sep method as the paramter to split 
 With that done, we can move on to more advanced methods.
 
 
-# 06. Checking Files and Listing Folder Contents
+### 06. Checking Files and Listing Folder Contents ###
 
-# 07. Reading and Writing Files
+### 07. Reading and Writing Files ###
 
-# 08. Saving Variables
+### 08. Saving Variables ###
 
-# 09. Demo - Reading and Writing a Config File
+### 09. Demo - Reading and Writing a Config File ###
 
-# 10. Copying, Moving, and Deleting Files
+### 10. Copying, Moving, and Deleting Files ###
 
-# 11. Demo - Inspecting a Directory Structure
+### 11. Demo - Inspecting a Directory Structure ###
 
-# 12. Working and Syncing with FTP
+### 12. Working and Syncing with FTP ###
 
-# 13. Handling Zip Archives
+### 13. Handling Zip Archives ###
 
-# 14. Demo - Configurable Backup Script
+### 14. Demo - Configurable Backup Script ###
 
-# 15. Summary
+### 15. Summary ###
 
-# III. PDF Data Extraction Automation
+## III. PDF Data Extraction Automation ##
 
-# 01. Introduction
+### 01. Introduction ###
 
-# 02. Overview
+### 02. Overview ###
 
-# 03. Types of PDF Files
+### 03. Types of PDF Files ###
 
-# 04. PDF File Handling Basics
+### 04. PDF File Handling Basics ###
 
-# 05. Demo - Extracting Text and Combining PDFs
+### 05. Demo - Extracting Text and Combining PDFs ###
 
-# 06. Extract Fields from Form-based PDF Files
+### 06. Extract Fields from Form-based PDF Files ###
 
-# 07. Demo - Extracting Fields
+### 07. Demo - Extracting Fields ###
 
-# 08. Summary
+### 08. Summary ###
 
-# IV. Salesforce Data Entry Automation
+## IV. Salesforce Data Entry Automation ##
 
-# 01. Introduction
+### 01. Introduction ###
 
-# 02. Overview
+### 02. Overview ###
 
-# 03. Automation with Python and Salesforce
+### 03. Automation with Python and Salesforce ###
 
-# 04. Demo - Salesforce Opportunity Web Form
+### 04. Demo - Salesforce Opportunity Web Form ###
 
-# 05. Demo - Form-based PDF for a Salesforce Opportunity
+### 05. Demo - Form-based PDF for a Salesforce Opportunity ###
 
-# 06. Demo - Browser Script for Automatic Data Entry
+### 06. Demo - Browser Script for Automatic Data Entry ###
 
-# 07. Summary
+### 07. Summary ###
