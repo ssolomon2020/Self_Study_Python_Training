@@ -1,7 +1,7 @@
 # Business Automation with Python: Getting Started
-Course on PluralSight | Web Site: http://www.pluralsight.com
-By: Eduardo Freitas | Web Site: https://edfreitas.me
-Course Notes
+- Course on PluralSight | Web Site: http://www.pluralsight.com
+- By: Eduardo Freitas | Web Site: https://edfreitas.me
+- Course Notes
 
 # I. Course Overview
 
@@ -26,30 +26,30 @@ Python is an amazing programming language packed with great features and librari
 # 02. Overview
 
 What is covered:
-  What is business Automation?
-  File Handling Basics in Python
-  Reading and Writing Files in Python
-  Copying, Moving and Deleting Files and Folders with Python
-  Walking a Directory Tree with Python
-  Working and Syncing with an FTP Server
-  Handling Zip Archives with Python
+* What is business Automation?
+* File Handling Basics in Python
+* Reading and Writing Files in Python
+* Copying, Moving and Deleting Files and Folders with Python
+* Walking a Directory Tree with Python
+* Working and Syncing with an FTP Server
+* Handling Zip Archives with Python
 
 
 # 03. What is Business Automation?
 
 Business Automation is - a technology-enabled automation of business processes.
-  Note: Be aware that business processes may vary.
+- Note: Be aware that business processes may vary.
 
 Why use Python?
-  Simple to use, mature, and growing.
+* Simple to use, mature, and growing.
     An amazing programming language and is easy to get started with.
     
-  Can complete tasks with less lines of code.
+* Can complete tasks with less lines of code.
     It allows you as a developer to write code in a clean and organized way, requiring fewer lines of code.
 
-  Open source and flexible, with large enthusiastic community.
+* Open source and flexible, with large enthusiastic community.
     
-  It provides many built-in libraries which do amazing things.
+* It provides many built-in libraries which do amazing things.
     Note: Before writing code yourself, check if there's already a Python library that does what you want. You'll likely already find a Python library for it.
 
 
@@ -61,18 +61,18 @@ File Handling Automation is - the capability of handling computer files in an au
   Files and their content can be manipulated and changed without any manual intervention.
 
 What types of file automation tasks can we carry out with Python?
-  Read files.
-  Write files.
-  Copy Files.
-  Move files.
+* Read files.
+* Write files.
+* Copy Files.
+* Move files.
     Move files from folder A to folder B.
-  Get and retrieve files from an FTP server.
-  Archive files. (Zip)
+* Get and retrieve files from an FTP server.
+* Archive files. (Zip)
 
 # 05. File Handling Basics
 
 A file is made up of a file path and a file name.
-  C:\Folder\File.txt
+- C:\Folder\File.txt
 
 A file has:
   A root directory location
