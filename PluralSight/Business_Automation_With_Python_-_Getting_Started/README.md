@@ -4,7 +4,7 @@
 # Business Automation with Python: Getting Started #
 - Course on PluralSight | Web Site: http://www.pluralsight.com
 - By: Eduardo Freitas | Web Site: https://edfreitas.me
-
+<br><br>
 
 ## I. Course Overview ##
 
@@ -17,14 +17,14 @@ Python is a powerful and yet still easy enough programming language to use, adva
 Some of the major topics covered include: core aspects of Business Automation, file automation tasks, PDF data extraction automation, Salesforce data entry automation, and watching the technologies and principles getting applied.
 
 By the end of this course you'll know the basics of Business Automation using Python, and be able to write code that uses it. Before beginning the the course, you should have some basic knowledge in Python and find your way around Visual Studio Code
-
+<br><br>
 
 ## II. File Automation Tasks ##
 
 ### 01. Introduction ####
 
 Python is an amazing programming language packed with great features and libraries. It is also great for automating repetative tasks. Python is also super easy to learn, so even if you've never used it before, but have some previous programming experience, You'll be able to follow along and apply some of the techniques in this course through your daily work. Automation is all about having the computer to do the work for you rather than the you working for the computer.
-
+<br><br>
 
 ### 02. Overview ###
 
@@ -36,32 +36,33 @@ What is covered:
 - Walking a Directory Tree with Python
 - Working and Syncing with an FTP Server
 - Handling Zip Archives with Python
-
+<br><br>
 
 ### 03. What is Business Automation? ###
 
 Business Automation is - a technology-enabled automation of business processes.
-- Note: Be aware that business processes may vary.
+- **Note: Be aware that business processes may vary.**
 
 Why use Python?
 - Simple to use, mature, and growing.
-    An amazing programming language and is easy to get started with.
+    - An amazing programming language and is easy to get started with.
     
 - Can complete tasks with less lines of code.
-    It allows you as a developer to write code in a clean and organized way, requiring fewer lines of code.
+    - It allows you as a developer to write code in a clean and organized way, requiring fewer lines of code.
 
 - Open source and flexible, with large enthusiastic community.
     
 - It provides many built-in libraries which do amazing things.
-    Note: Before writing code yourself, check if there's already a Python library that does what you want. You'll likely already find a Python library for it.
-
+    - **Note: Before writing code yourself, check if there's already a Python library that does what you want. You'll likely already find a Python library for it.**
 
 With that in mind, it is a great choice for writing scripts that accomplish the same repetitive tasks a person would do manually on a computer. A well designed Python script can reduce manual work tremendously.
+<br><br>
 
 ### 04. What is File Handling Automation? ###
 
 File Handling Automation is - the capability of handling computer files in an automatic way.
-  Files and their content can be manipulated and changed without any manual intervention.
+
+Files and their content can be manipulated and changed without any manual intervention.
 
 What types of file automation tasks can we carry out with Python?
 - Read files.
@@ -71,6 +72,7 @@ What types of file automation tasks can we carry out with Python?
     - *i.e.: Move files from folder A to folder B.*
 - Get and retrieve files from an FTP server.
 - Archive files. *(i.e.: Zip)*
+<br><br>
 
 ### 05. File Handling Basics ###
 
@@ -128,7 +130,7 @@ You can also call the **split** method with the **sep** method as the paramter t
 - `'/usr/bin'.split(os.path.sep)`
 
 With that done, we can move on to more advanced methods.
-<br>
+<br><br>
 
 ### 06. Checking Files and Listing Folder Contents ###
 
@@ -157,7 +159,7 @@ The **isdir** method returns **True** if it is a directory and **False** if it i
     - `>>> False`
 
 Next, you will see how to read and write files.
-<br>
+<br><br>
 
 ### 07. Reading and Writing Files ###
 
