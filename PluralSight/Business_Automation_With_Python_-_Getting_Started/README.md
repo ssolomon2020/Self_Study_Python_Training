@@ -76,13 +76,13 @@ What types of file automation tasks can we carry out with Python?
 A file is made up of a file path and a file name. <br>
 - `C:\Folder\File.txt`
 
-A file has: <br>
-    A root directory location <br>
-        `C:\`
-    A directory where the file resides <br>
-        `\Folder`
-    A file name <br>
-        `File.txt`
+A file has:
+* A root directory location
+    `C:\` <br>
+* A directory where the file resides
+    `\Folder` <br>
+* A file name
+    `File.txt` <br>
 
 On Windows operating systems, file and folder paths are described using the backslash character. <br>
     `\`
