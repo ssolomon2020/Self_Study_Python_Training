@@ -78,11 +78,11 @@ A file is made up of a file path and a file name. <br>
 
 A file has:
 * A root directory location
-    `C:\` <br>
+    * `C:\`
 * A directory where the file resides
-    `\Folder` <br>
+    * `\Folder`
 * A file name
-    `File.txt` <br>
+    * `File.txt`
 
 On Windows operating systems, file and folder paths are described using the backslash character. <br>
     `\`
