@@ -85,10 +85,10 @@ A file has:
     File.txt
 
 On Windows operating systems, file and folder paths are described using the backslash character.
-  \
+  '\'
 
 On Mac OS, Linux, and Unix-based operating systems, they are described using the forward slash character.
-  /
+  '/'
 
 This is the same file path on Mac OS, Linux, or Unix.
   /Folder/File.txt
@@ -111,7 +111,7 @@ If you need to get a directory name of a path, you can call the dirname method.
 If you need a path's dirname and basename together, then call the split method to return a tuple value with of each. i.e.: ('C:\\Af','pr.exe')
   os.path.split('C:\\Af\pr.exe')
 
-You can also join the names of two folders into one path with the join method. i.e.: returning either \foo\fighter or /foo/fighter
+You can also join the names of two folders into one path with the join method. *i.e.: returning either \foo\fighter or /foo/fighter*
   os.path.join('foo', 'fighter')
 
 You can also assign paths to variables using the = character as an assignment operator. Remember to use variable naming best practices according to the PEP8 style guide.
@@ -123,7 +123,7 @@ With the sep method, you can also determine the correct folder separating slash 
 If you split the string and pass the sep as a parameter, it will return a list of each part without the slashes. i.e.: ['C:', 'Windows', 'System32', 'calc.exe']
   c.split(os.path.sep)
 
-You can also call the split method with the sep method as the paramter to split a string directly. i.e.: ['','usr','bin']
+You can also call the split method with the sep method as the paramter to split a string directly. *i.e.: ['','usr','bin']*
   '/usr/bin'.split(os.path.sep)
 
 With that done, we can move on to more advanced methods.
