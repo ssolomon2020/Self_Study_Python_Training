@@ -64,7 +64,7 @@ What types of file automation tasks can we carry out with Python?
 * Read files.
 * Write files.
 * Copy Files.
-* Move files.
+* Move files. <br>
     Move files from folder A to folder B.
 * Get and retrieve files from an FTP server.
 * Archive files. (Zip)
