@@ -1,7 +1,9 @@
+Course notes by Shawn Solomon
+
 # Business Automation with Python: Getting Started #
 - Course on PluralSight | Web Site: http://www.pluralsight.com
 - By: Eduardo Freitas | Web Site: https://edfreitas.me
-- Course Notes
+
 
 ## I. Course Overview ##
 
