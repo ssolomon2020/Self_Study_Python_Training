@@ -29,13 +29,13 @@ Python is an amazing programming language packed with great features and librari
 ### 02. Overview ###
 
 What is covered:
-* What is Business Automation?
-* File Handling Basics in Python
-* Reading and Writing Files in Python
-* Copying, Moving and Deleting Files and Folders with Python
-* Walking a Directory Tree with Python
-* Working and Syncing with an FTP Server
-* Handling Zip Archives with Python
+- What is Business Automation?
+- File Handling Basics in Python
+- Reading and Writing Files in Python
+- Copying, Moving and Deleting Files and Folders with Python
+- Walking a Directory Tree with Python
+- Working and Syncing with an FTP Server
+- Handling Zip Archives with Python
 
 
 ### 03. What is Business Automation? ###
@@ -44,15 +44,15 @@ Business Automation is - a technology-enabled automation of business processes.
 - Note: Be aware that business processes may vary.
 
 Why use Python?
-* Simple to use, mature, and growing.
+- Simple to use, mature, and growing.
     An amazing programming language and is easy to get started with.
     
-* Can complete tasks with less lines of code.
+- Can complete tasks with less lines of code.
     It allows you as a developer to write code in a clean and organized way, requiring fewer lines of code.
 
-* Open source and flexible, with large enthusiastic community.
+- Open source and flexible, with large enthusiastic community.
     
-* It provides many built-in libraries which do amazing things.
+- It provides many built-in libraries which do amazing things.
     Note: Before writing code yourself, check if there's already a Python library that does what you want. You'll likely already find a Python library for it.
 
 
@@ -64,13 +64,13 @@ File Handling Automation is - the capability of handling computer files in an au
   Files and their content can be manipulated and changed without any manual intervention.
 
 What types of file automation tasks can we carry out with Python?
-* Read files.
-* Write files.
-* Copy Files.
-* Move files.
-    * *i.e.: Move files from folder A to folder B.*
-* Get and retrieve files from an FTP server.
-* Archive files. *(i.e.: Zip)*
+- Read files.
+- Write files.
+- Copy Files.
+- Move files.
+    - *i.e.: Move files from folder A to folder B.*
+- Get and retrieve files from an FTP server.
+- Archive files. *(i.e.: Zip)*
 
 ### 05. File Handling Basics ###
 
@@ -78,59 +78,86 @@ A file is made up of a file path and a file name. <br>
 - `C:\Folder\File.txt`
 
 A file has:
-* A **root directory** location
-    * `C:\`
-* A **directory** where the file resides
-    * `\Folder`
-* A file **name**
-    * `File.txt`
+- A **root directory** location
+    - `C:\`
+- A **directory** where the file resides
+    - `\Folder`
+- A file **name**
+    - `File.txt`
 
 On **Windows** operating systems, **file and folder** paths are described using the **backslash** character.
-* `\`
+- `\`
 
 On **Mac OS**, **Linux**, and **Unix-based** operating systems, they are described using the **forward slash** character.
-* `/`
+- `/`
 
 This is the same file path on **Mac OS**, **Linux**, or **Unix**.
-* `/Folder/File.txt`
+- `/Folder/File.txt`
 
 To manipulate files with Python, the **os** library needs to be imported which includes OS related methods.
-* `import os`
+- `import os`
 
 For programs to work on all operating systems, **don't** concatenate strings of the path. Instead, use the **join** method for the file path which will concatenate based on the OS filesystem for you.
-* `os.path.join('C:\\Folder', 'File.txt')`
+- `os.path.join('C:\\Folder', 'File.txt')`
 
 You can also get the **current working directory** for the program stored in an OS file system with the **getcwd** method.
-* `os.getcwd()`
+- `os.getcwd()`
 
 Sometimes it is necessary to **change** the current working directory with the **chdir method** to work with another file.
-* `os.chdir('C:\\Af\\Bf')`
+- `os.chdir('C:\\Af\\Bf')`
 
 If you need to get a **directory name** of a path, you can call the **dirname** method.
-* `os.path.dirname('C:\\Af\\Bf\\')`
+- `os.path.dirname('C:\\Af\\Bf\\')`
 
 If you need a path's **dirname** and **basename** together, then call the **split** method to return a tuple value with of each. *i.e.: ('C:\\Af','pr.exe')*
-* `os.path.split('C:\\Af\pr.exe')`
+- `os.path.split('C:\\Af\pr.exe')`
 
 You can also join the **names** of two **folders** into one path with the **join** method. *i.e.: returning either \foo\fighter or /foo/fighter*
-* `os.path.join('foo', 'fighter')`
+- `os.path.join('foo', 'fighter')`
 
 You can also **assign** paths to variables using the **=** character as an **assignment operator**. Remember to use variable naming best practices according to the **PEP8 style guide**.
-* `c = 'C:\\Windows\\Systems32\\calc.exe'`
+- `c = 'C:\\Windows\\Systems32\\calc.exe'`
 
 With the **sep** method, you can also determine the **correct** folder separating slash depending on the operating system we are using.
-* `os.path.sep()`
+- `os.path.sep()`
 
 If you split the **string** and pass the **sep** as a parameter, it will return a **list** of each part without the slashes. *i.e.: ['C:', 'Windows', 'System32', 'calc.exe']*
-* `c.split(os.path.sep)`
+- `c.split(os.path.sep)`
 
 You can also call the **split** method with the **sep** method as the paramter to split a **string** directly. *i.e.: ['','usr','bin']*
-* `'/usr/bin'.split(os.path.sep)`
+- `'/usr/bin'.split(os.path.sep)`
 
 With that done, we can move on to more advanced methods.
-
+<br>
 
 ### 06. Checking Files and Listing Folder Contents ###
+
+Several Python methods will raise an exception if you supply a file name or path that doesn't exist. For this reason, it is important to check files and folders before performing file operations. The path module provides functions to check whether a given path exists and whether it is a file or folder.
+
+The **getsize** method returns the **size** in bytes of the file path as a parameter.
+- `os.path.getsize('C:\\Af\pr.exe')`
+
+The **listdir** method returns the file names as a **list** within a folder. *i.e.: ['a.txt', 'b.txt', 'c.txt']*
+- `os.listdir('C:\\Af')`
+
+The **exists** method returns **True** if the path exists and **False** if it does not.
+- `os.path.exists('C:\\Windows')`
+    - `>>> True`
+
+The **isfile** method returns **True** if it is a file and **False** if it is not.
+- `os.path.isfile('C:\\Af\\pr.exe')`
+    - `>>> True`
+- `os.path.isfile('C:\\Af')`
+    - `>>> False`
+
+The **isdir** method returns **True** if it is a directory and **False** if it is not.
+- `os.path.isdir('C:\\Af')` 
+    - `>>> True`
+- `os.path.isdir('C:\\Af\\pr.exe')` 
+    - `>>> False`
+
+Next, you will see how to read and write files.
+<br>
 
 ### 07. Reading and Writing Files ###
 
