@@ -66,64 +66,64 @@ What types of file automation tasks can we carry out with Python?
 * Read files.
 * Write files.
 * Copy Files.
-* Move files. <br>
+* Move files.
         * Move files from folder A to folder B.
 * Get and retrieve files from an FTP server.
 * Archive files. (Zip)
 
 ### 05. File Handling Basics ###
 
-A file is made up of a file path and a file name.
+A file is made up of a file path and a file name. <br>
 - `C:\Folder\File.txt`
 
-A file has:
-  A root directory location
-    `C:\`
-  A directory where the file resides
-    `\Folder`
-  A file name
-    `File.txt`
+A file has: <br>
+    A root directory location <br>
+        `C:\`
+    A directory where the file resides <br>
+        `\Folder`
+    A file name <br>
+        `File.txt`
 
 On Windows operating systems, file and folder paths are described using the backslash character. <br>
-  `\`
+    `\`
 
 On Mac OS, Linux, and Unix-based operating systems, they are described using the forward slash character. <br>
-  `/`
+    `/`
 
-This is the same file path on Mac OS, Linux, or Unix.
-  `/Folder/File.txt`
+This is the same file path on Mac OS, Linux, or Unix. <br>
+    `/Folder/File.txt`
 
-To manipulate files with Python, the OS library needs to be imported which includes OS related methods.
+To manipulate files with Python, the OS library needs to be imported which includes OS related methods. <br>
   `import os`
 
-For programs to work on all operating systems, don't concatenate strings of the path. Instead, use the join method for the file path which will concatonate based on the OS filesystem.
+For programs to work on all operating systems, don't concatenate strings of the path. Instead, use the join method for the file path which will concatonate based on the OS filesystem. <br>
   `os.path.join('C:\\Folder', 'File.txt')`
 
-You can also get the current working directory for the program stored in an OS file system.
+You can also get the current working directory for the program stored in an OS file system. <br>
   `os.getcwd()`
 
-Sometimes it is necessary to change the current working directory with the chdir method to work with another file.
+Sometimes it is necessary to change the current working directory with the chdir method to work with another file. <br>
   `os.chdir('C:\\Af\\Bf')`
 
-If you need to get a directory name of a path, you can call the dirname method.
+If you need to get a directory name of a path, you can call the dirname method. <br>
   `os.path.dirname('C:\\Af\\Bf\\')`
 
-If you need a path's dirname and basename together, then call the split method to return a tuple value with of each. i.e.: ('C:\\Af','pr.exe')
+If you need a path's dirname and basename together, then call the split method to return a tuple value with of each. <br> i.e.: ('C:\\Af','pr.exe')
   `os.path.split('C:\\Af\pr.exe')`
 
-You can also join the names of two folders into one path with the join method. *i.e.: returning either \foo\fighter or /foo/fighter*
+You can also join the names of two folders into one path with the join method. *i.e.: returning either \foo\fighter or /foo/fighter* <br>
   `os.path.join('foo', 'fighter')`
 
-You can also assign paths to variables using the = character as an assignment operator. Remember to use variable naming best practices according to the PEP8 style guide.
+You can also assign paths to variables using the = character as an assignment operator. Remember to use variable naming best practices according to the PEP8 style guide. <br>
   `c = 'C:\\Windows\\Systems32\\calc.exe'`
 
-With the sep method, you can also determine the correct folder separating slash depending on the operating system we are using.
+With the sep method, you can also determine the correct folder separating slash depending on the operating system we are using. <br>
   `os.path.sep()`
 
-If you split the string and pass the sep as a parameter, it will return a list of each part without the slashes. *i.e.: ['C:', 'Windows', 'System32', 'calc.exe']*
+If you split the string and pass the sep as a parameter, it will return a list of each part without the slashes. *i.e.: ['C:', 'Windows', 'System32', 'calc.exe']* <br>
   `c.split(os.path.sep)`
 
-You can also call the split method with the sep method as the paramter to split a string directly. *i.e.: ['','usr','bin']*
+You can also call the split method with the sep method as the paramter to split a string directly. *i.e.: ['','usr','bin']* <br>
   `'/usr/bin'.split(os.path.sep)`
 
 With that done, we can move on to more advanced methods.
