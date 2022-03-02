@@ -74,57 +74,57 @@ What types of file automation tasks can we carry out with Python?
 ### 05. File Handling Basics ###
 
 A file is made up of a file path and a file name.
-- C:\Folder\File.txt
+- `C:\Folder\File.txt`
 
 A file has:
   A root directory location
-    C:\
+    `C:\`
   A directory where the file resides
-    \Folder
+    `\Folder`
   A file name
-    File.txt
+    `File.txt`
 
-On Windows operating systems, file and folder paths are described using the backslash character.
-  '\'
+On Windows operating systems, file and folder paths are described using the backslash character. <br>
+  `\`
 
-On Mac OS, Linux, and Unix-based operating systems, they are described using the forward slash character.
-  '/'
+On Mac OS, Linux, and Unix-based operating systems, they are described using the forward slash character. <br>
+  `/`
 
 This is the same file path on Mac OS, Linux, or Unix.
-  /Folder/File.txt
+  `/Folder/File.txt`
 
 To manipulate files with Python, the OS library needs to be imported which includes OS related methods.
-  import os
+  `import os`
 
 For programs to work on all operating systems, don't concatenate strings of the path. Instead, use the join method for the file path which will concatonate based on the OS filesystem.
-  os.path.join('C:\\Folder', 'File.txt')
+  `os.path.join('C:\\Folder', 'File.txt')`
 
 You can also get the current working directory for the program stored in an OS file system.
-  os.getcwd()
+  `os.getcwd()`
 
 Sometimes it is necessary to change the current working directory with the chdir method to work with another file.
-  os.chdir('C:\\Af\\Bf')
+  `os.chdir('C:\\Af\\Bf')`
 
 If you need to get a directory name of a path, you can call the dirname method.
-  os.path.dirname('C:\\Af\\Bf\\')
+  `os.path.dirname('C:\\Af\\Bf\\')`
 
 If you need a path's dirname and basename together, then call the split method to return a tuple value with of each. i.e.: ('C:\\Af','pr.exe')
-  os.path.split('C:\\Af\pr.exe')
+  `os.path.split('C:\\Af\pr.exe')`
 
 You can also join the names of two folders into one path with the join method. *i.e.: returning either \foo\fighter or /foo/fighter*
-  os.path.join('foo', 'fighter')
+  `os.path.join('foo', 'fighter')`
 
 You can also assign paths to variables using the = character as an assignment operator. Remember to use variable naming best practices according to the PEP8 style guide.
-  c = 'C:\\Windows\\Systems32\\calc.exe'
+  `c = 'C:\\Windows\\Systems32\\calc.exe'`
 
 With the sep method, you can also determine the correct folder separating slash depending on the operating system we are using.
-  os.path.sep()
+  `os.path.sep()`
 
-If you split the string and pass the sep as a parameter, it will return a list of each part without the slashes. i.e.: ['C:', 'Windows', 'System32', 'calc.exe']
-  c.split(os.path.sep)
+If you split the string and pass the sep as a parameter, it will return a list of each part without the slashes. *i.e.: ['C:', 'Windows', 'System32', 'calc.exe']*
+  `c.split(os.path.sep)`
 
 You can also call the split method with the sep method as the paramter to split a string directly. *i.e.: ['','usr','bin']*
-  '/usr/bin'.split(os.path.sep)
+  `'/usr/bin'.split(os.path.sep)`
 
 With that done, we can move on to more advanced methods.
 
